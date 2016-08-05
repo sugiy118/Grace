@@ -25,6 +25,7 @@ class Question5ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("5問目開始時点での得点は\(x)")
         
         questionManager.fetchQuestion5 {
             self.question5Label.text = self.questionManager.questions[4].sentence
@@ -35,7 +36,7 @@ class Question5ViewController: UIViewController {
             self.answer2.setTitle(self.answerManager.answers[4].answer2, forState: UIControlState.Normal)
             self.answer3.setTitle(self.answerManager.answers[4].answer3, forState: UIControlState.Normal)
             self.answer4.setTitle(self.answerManager.answers[4].answer4, forState: UIControlState.Normal)
-            self.a = self.answerManager.answers[0].rightAnswer
+            self.a = self.answerManager.answers[4].rightAnswer
             print(self.a)
         }
     }
@@ -187,7 +188,11 @@ class Question5ViewController: UIViewController {
             sender.enabled = false
             b = 0
         }
-        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let resultViewController = segue.destinationViewController as! ResultViewController
+        resultViewController.x = self.x
     }
 
     override func didReceiveMemoryWarning() {

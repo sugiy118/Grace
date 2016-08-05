@@ -70,7 +70,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="Ngb-3I-yKJ" kind="show" id="hNc-Xb-hqt"/>
+                                    <segue destination="Ngb-3I-yKJ" kind="show" id="9Ok-S5-BHV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjF-xs-jn5">
@@ -99,7 +99,6 @@
                         <outlet property="answer3" destination="hZc-k3-6Wu" id="vdt-Sz-RcZ"/>
                         <outlet property="answer4" destination="8DC-eA-2wN" id="aTw-nd-QX2"/>
                         <outlet property="question1Label" destination="LjF-xs-jn5" id="sZk-tI-CJu"/>
-                        <outlet property="question1view" destination="IGO-O3-WvO" id="KK8-fy-fz5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25x-7z-C7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,7 +342,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="B9U-yp-YPz" kind="show" id="twH-pF-5NE"/>
+                                    <segue destination="B9U-yp-YPz" kind="show" identifier="ShowToQuestion5ViewController" id="twH-pF-5NE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -490,6 +489,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-ai-xxT">
+                                <rect key="frame" x="317" y="629" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="gotoTopSegue" id="srW-bj-9hV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

@@ -8,10 +8,6 @@
 
 import UIKit
 
-@objc protocol ArticleTableViewDelegate{
-    func didSelectTableViewCell(x: Int)
-}
-
 class Question2ViewController: UIViewController {
     
     @IBOutlet weak var question2Label: UILabel!
@@ -22,13 +18,13 @@ class Question2ViewController: UIViewController {
     
     let questionManager = QuestionManager.sharedInstance
     let answerManager = AnswerManager.sharedInstance
-    
     var x: Int = 0
     var a = 0
     var b = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("2問目開始時点での得点は\(x)")
         
         questionManager.fetchQuestion2 {
             self.question2Label.text = self.questionManager.questions[1].sentence
@@ -39,8 +35,7 @@ class Question2ViewController: UIViewController {
             self.answer2.setTitle(self.answerManager.answers[1].answer2, forState: UIControlState.Normal)
             self.answer3.setTitle(self.answerManager.answers[1].answer3, forState: UIControlState.Normal)
             self.answer4.setTitle(self.answerManager.answers[1].answer4, forState: UIControlState.Normal)
-            self.a = self.answerManager.answers[0].rightAnswer
-            print(self.a)
+            self.a = self.answerManager.answers[1].rightAnswer
         }
     }
     
@@ -191,7 +186,11 @@ class Question2ViewController: UIViewController {
             sender.enabled = false
             b = 0
         }
-
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let question3ViewController = segue.destinationViewController as! Question3ViewController
+        question3ViewController.x = self.x
     }
     
     override func didReceiveMemoryWarning() {

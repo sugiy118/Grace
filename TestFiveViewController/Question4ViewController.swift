@@ -18,13 +18,13 @@ class Question4ViewController: UIViewController {
     
     let questionManager = QuestionManager.sharedInstance
     let answerManager = AnswerManager.sharedInstance
-    
     var x: Int = 0
     var a = 0
     var b = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("4問目開始時点での得点は\(x)")
         
         questionManager.fetchQuestion4 {
             self.question4Label.text = self.questionManager.questions[3].sentence
@@ -35,7 +35,7 @@ class Question4ViewController: UIViewController {
             self.answer2.setTitle(self.answerManager.answers[3].answer2, forState: UIControlState.Normal)
             self.answer3.setTitle(self.answerManager.answers[3].answer3, forState: UIControlState.Normal)
             self.answer4.setTitle(self.answerManager.answers[3].answer4, forState: UIControlState.Normal)
-            self.a = self.answerManager.answers[0].rightAnswer
+            self.a = self.answerManager.answers[3].rightAnswer
             print(self.a)
         }
     }
@@ -187,9 +187,12 @@ class Question4ViewController: UIViewController {
             sender.enabled = false
             b = 0
         }
-        
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let question5ViewController = segue.destinationViewController as! Question5ViewController
+        question5ViewController.x = self.x
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

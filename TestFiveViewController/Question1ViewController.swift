@@ -8,11 +8,6 @@
 
 import UIKit
 
-@objc protocol MainTableViewDelegate{
-    func didSelectTableViewCell(x: Int)
-}
-
-
 class Question1ViewController: UIViewController {
     
     @IBOutlet weak var question1Label: UILabel!
@@ -20,21 +15,21 @@ class Question1ViewController: UIViewController {
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var answer4: UIButton!
-    @IBOutlet var question1view: UIView!
-
     
     let questionManager = QuestionManager.sharedInstance
     let answerManager = AnswerManager.sharedInstance
-    var x:Int = 0
+    var x: Int = 0
     var a = 0
     var b = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("1問目開始時点での得点は\(x)")
         
         questionManager.fetchQuestion1 {
             self.question1Label.text = self.questionManager.questions[0].sentence
         }
+        print(x)
         
         answerManager.fetchAnswer1 {
             self.answer1.setTitle(self.answerManager.answers[0].answer1, forState: UIControlState.Normal)
@@ -101,6 +96,7 @@ class Question1ViewController: UIViewController {
                 sender.enabled = false
             }
         } else if a == 2 {
+            x += 1
             let alertController = UIAlertController(title: "Great!!", message: "正解です",
                                                     preferredStyle: UIAlertControllerStyle.Alert)
             let Action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil)
@@ -192,13 +188,10 @@ class Question1ViewController: UIViewController {
         }
     }
     
-    
-    
-    //
-    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //        let question2ViewController = segue.destinationViewController as! Question2ViewController
-    //        question2ViewController.x = self.x
-    //    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let question2ViewController = segue.destinationViewController as! Question2ViewController
+        question2ViewController.x = self.x
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
