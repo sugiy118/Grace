@@ -13,10 +13,26 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(MainViewController.logout))
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if NCMBUser.currentUser() == nil {
+            performSegueWithIdentifier("modalLoginViewController", sender: self)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func logout() {
+        NCMBUser.logOut()
+        performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
 
 
