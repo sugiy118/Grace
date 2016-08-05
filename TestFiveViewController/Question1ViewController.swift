@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol ArticleTableViewDelegate{
+@objc protocol MainTableViewDelegate{
     func didSelectTableViewCell(x: Int)
 }
 

@@ -21,7 +21,7 @@ class Question5ViewController: UIViewController {
     
     var x: Int = 0
     var a = 0
-    var b = 0
+    var b = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,6 @@ class Question5ViewController: UIViewController {
     @IBAction func answer1Btn(sender: UIButton) {
         if b == 0 {
             if a == 1 {
-                x += 1
                 let alertController = UIAlertController(title: "Yes!!", message: "こちらが正解でした",
                                                         preferredStyle: UIAlertControllerStyle.Alert)
                 let Action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil)
@@ -82,7 +81,6 @@ class Question5ViewController: UIViewController {
     @IBAction func answer2Btn(sender: UIButton) {
         if b == 0 {
             if a == 2 {
-                x += 1
                 let alertController = UIAlertController(title: "Yes!!", message: "こちらが正解でした",
                                                         preferredStyle: UIAlertControllerStyle.Alert)
                 let Action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil)
@@ -120,7 +118,6 @@ class Question5ViewController: UIViewController {
     @IBAction func answer3Btn(sender: UIButton) {
         if b == 0 {
             if a == 3 {
-                x += 1
                 let alertController = UIAlertController(title: "Yes!!", message: "こちらが正解でした",
                                                         preferredStyle: UIAlertControllerStyle.Alert)
                 let Action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:nil)

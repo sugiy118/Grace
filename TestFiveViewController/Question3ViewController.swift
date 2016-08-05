@@ -21,7 +21,7 @@ class Question3ViewController: UIViewController {
 
     var x: Int = 0
     var a = 0
-    var b = 0
+    var b = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()

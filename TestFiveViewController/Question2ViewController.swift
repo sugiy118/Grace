@@ -8,6 +8,10 @@
 
 import UIKit
 
+@objc protocol ArticleTableViewDelegate{
+    func didSelectTableViewCell(x: Int)
+}
+
 class Question2ViewController: UIViewController {
     
     @IBOutlet weak var question2Label: UILabel!
