@@ -16,7 +16,27 @@ class AreaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        setLocationImageView()
+        setImageMaskView()
+        setNameLabel()
     }
+    
+    func setLocationImageView(){
+        self.locationImage.contentMode = UIViewContentMode.ScaleAspectFill
+        self.locationImage.layer.masksToBounds = true
+    }
+    
+    func setImageMaskView(){
+        self.imageMask.alpha = 0.8
+    }
+    
+    func setNameLabel(){
+        self.locationName.textColor = UIColor.whiteColor()
+        self.locationName.textAlignment = NSTextAlignment.Center
+        self.locationName.font = UIFont(name: "Helvetica-Light", size: 40)
+    }
+
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

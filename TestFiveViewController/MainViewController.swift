@@ -8,10 +8,33 @@
 
 import UIKit
 
-class MainViewController: UIViewController{
+class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewDelegate{
+    @IBOutlet weak var locationScrollView: UIScrollView!
 
+    let quizManager = QuizManager.sharedInstance
+    
+    var currentSelectedQuiz: Quiz?
+
+    let tokyo = "TOKYO"
+    let tokyoImageName = "tokyo_top_image.png"
+    let blue = UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
+    let green = UIColor(red: 105.0 / 255, green: 207.0 / 255, blue: 153.0 / 255, alpha: 1.0)
+    let red = UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let hoge = setMainTableView(0, y: 0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
+
+        self.locationScrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
+//        self.locationScrollView.contentSize = CGSizeMake(self.view.frame.width, self.locationScrollView.frame.height)
+        self.locationScrollView.pagingEnabled = true
+        
+        quizManager.fetchQuizcategories { 
+            hoge.reloadData()
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -24,6 +47,22 @@ class MainViewController: UIViewController{
             performSegueWithIdentifier("modalLoginViewController", sender: self)
         }
     }
+    
+    func setMainTableView(x: CGFloat,y: CGFloat, locationName: String, locationImageName: String, color: UIColor) -> UITableView{
+        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+
+//        let frame = CGRectMake(0, 0, self.view.frame.width, locationScrollView.frame.height)
+//        let frame = CGRectMake(x, 0, self.view.frame.width, locationScrollView.frame.height)
+        let mainTableView = MainTableView(frame: frame, style: UITableViewStyle.Plain)
+        
+        mainTableView.customDelegate = self
+        mainTableView.locationName = locationName
+        mainTableView.locationImageName = locationImageName
+        mainTableView.color = color
+        self.locationScrollView.addSubview(mainTableView)
+        return mainTableView
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,6 +72,23 @@ class MainViewController: UIViewController{
     func logout() {
         NCMBUser.logOut()
         performSegueWithIdentifier("modalLoginViewController", sender: self)
+    }
+    
+    func didSelectTableViewCell(quiz: Quiz) {
+        self.currentSelectedQuiz = quiz
+        print("=======")
+        print(quiz)
+        print(quiz.title)
+        print(quiz.quiznumber)
+        print("=======")
+        self.performSegueWithIdentifier("ShowToQuestion1ViewController", sender: nil)
+        print("\(currentSelectedQuiz?.quiznumber)ええええ")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let question1ViewController = segue.destinationViewController as! Question1ViewController
+        question1ViewController.quiz = self.currentSelectedQuiz
+        print("\(self.currentSelectedQuiz)おおおおお")
     }
 
 

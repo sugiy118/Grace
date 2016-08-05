@@ -12,9 +12,14 @@ class AnswerManager: NSObject {
     static let sharedInstance = AnswerManager()
     var answers:[Answer] = []
     
-    func fetchAnswer1(callback:() -> Void) {
+    var y: Int = 0
+    
+    
+    
+    func fetchAnswer1(x: Int, callback:() -> Void) {
         let query = NCMBQuery (className: "Answer")
-        query.whereKey("quizNumber", equalTo: 1)
+        self.y = x
+        query.whereKey("quizNumber", equalTo: x)
         query.whereKey("quizPriority", equalTo: 0)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
@@ -42,7 +47,7 @@ class AnswerManager: NSObject {
     
     func fetchAnswer2(callback:() -> Void) {
         let query = NCMBQuery (className: "Answer")
-        query.whereKey("quizNumber", equalTo: 1)
+        query.whereKey("quizNumber", equalTo: self.y)
         query.whereKey("quizPriority", equalTo: 1)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
@@ -68,7 +73,7 @@ class AnswerManager: NSObject {
     
     func fetchAnswer3(callback:() -> Void) {
         let query = NCMBQuery (className: "Answer")
-        query.whereKey("quizNumber", equalTo: 1)
+        query.whereKey("quizNumber", equalTo: self.y)
         query.whereKey("quizPriority", equalTo: 2)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
@@ -94,7 +99,7 @@ class AnswerManager: NSObject {
     
     func fetchAnswer4(callback:() -> Void) {
         let query = NCMBQuery (className: "Answer")
-        query.whereKey("quizNumber", equalTo: 1)
+        query.whereKey("quizNumber", equalTo: self.y)
         query.whereKey("quizPriority", equalTo: 3)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
@@ -120,7 +125,7 @@ class AnswerManager: NSObject {
     
     func fetchAnswer5(callback:() -> Void) {
         let query = NCMBQuery (className: "Answer")
-        query.whereKey("quizNumber", equalTo: 1)
+        query.whereKey("quizNumber", equalTo: self.y)
         query.whereKey("quizPriority", equalTo: 4)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {

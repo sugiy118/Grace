@@ -10,6 +10,8 @@ import UIKit
 
 class QuizManager: NSObject {
     
+    static let sharedInstance = QuizManager()
+    
     var quizzes:[Quiz] = []
     
     func fetchQuizcategories(callback: () -> Void) {
@@ -21,8 +23,8 @@ class QuizManager: NSObject {
                     let title = object.objectForKey("title") as! String
                     let quizNumber = object.objectForKey("quizNumber") as! Int
                     let quiz = Quiz()
-                    quiz.title = title
                     quiz.quiznumber = quizNumber
+                    quiz.title = title
                     
                     self.quizzes.append(quiz)
                     callback()

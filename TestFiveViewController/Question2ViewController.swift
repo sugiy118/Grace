@@ -25,7 +25,6 @@ class Question2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("2問目開始時点での得点は\(x)")
-        
         questionManager.fetchQuestion2 {
             self.question2Label.text = self.questionManager.questions[1].sentence
         }

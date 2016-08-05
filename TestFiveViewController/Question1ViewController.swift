@@ -16,22 +16,31 @@ class Question1ViewController: UIViewController {
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var answer4: UIButton!
     
+    let quizManager = QuizManager.sharedInstance
     let questionManager = QuestionManager.sharedInstance
     let answerManager = AnswerManager.sharedInstance
-    var x: Int = 0
-    var a = 0
-    var b = 1
+    var x: Int = 0 //得点を入れておく変数
+    var a = 0 //正解値
+    var b = 1 //不正解だった時にはじく
+    
+    var quiz: Quiz!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("1問目開始時点での得点は\(x)")
-        
-        questionManager.fetchQuestion1 {
+        print("=======")
+        print(quiz)
+        print(quiz.title)
+        print(quiz.quiznumber)
+        print("=======")
+
+        questionManager.fetchQuestion1(quiz.quiznumber) { 
             self.question1Label.text = self.questionManager.questions[0].sentence
         }
-        print(x)
-        
-        answerManager.fetchAnswer1 {
+
+        answerManager.fetchAnswer1(quiz.quiznumber) { 
             self.answer1.setTitle(self.answerManager.answers[0].answer1, forState: UIControlState.Normal)
             self.answer2.setTitle(self.answerManager.answers[0].answer2, forState: UIControlState.Normal)
             self.answer3.setTitle(self.answerManager.answers[0].answer3, forState: UIControlState.Normal)
@@ -39,6 +48,15 @@ class Question1ViewController: UIViewController {
             self.a = self.answerManager.answers[0].rightAnswer
             print(self.a)
         }
+        
+//        answerManager.fetchAnswer1 {
+//            self.answer1.setTitle(self.answerManager.answers[0].answer1, forState: UIControlState.Normal)
+//            self.answer2.setTitle(self.answerManager.answers[0].answer2, forState: UIControlState.Normal)
+//            self.answer3.setTitle(self.answerManager.answers[0].answer3, forState: UIControlState.Normal)
+//            self.answer4.setTitle(self.answerManager.answers[0].answer4, forState: UIControlState.Normal)
+//            self.a = self.answerManager.answers[0].rightAnswer
+//            print(self.a)
+//        }
     }
     
     @IBAction func answer1Btn(sender: UIButton) {
