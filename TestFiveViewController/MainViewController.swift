@@ -84,11 +84,14 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
         self.performSegueWithIdentifier("ShowToQuestion1ViewController", sender: nil)
         print("\(currentSelectedQuiz?.quiznumber)ええええ")
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if NCMBUser.currentUser() != nil {
         let question1ViewController = segue.destinationViewController as! Question1ViewController
         question1ViewController.quiz = self.currentSelectedQuiz
         print("\(self.currentSelectedQuiz)おおおおお")
+        }
     }
 
 

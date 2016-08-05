@@ -28,13 +28,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="locationScrollView" destination="n9M-h3-MU8" id="nWQ-F9-DrG"/>
-                        <segue destination="KSz-nC-Xsf" kind="presentation" identifier="modalLoginViewController" id="MRe-i1-p2G"/>
+                        <segue destination="7zh-dY-vTw" kind="presentation" identifier="modalLoginViewController" id="MRe-i1-p2G"/>
                         <segue destination="Cls-hs-Fcp" kind="show" identifier="ShowToQuestion1ViewController" id="V3H-yI-wLF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.5" y="-404.5"/>
+            <point key="canvasLocation" x="1376.5" y="-350.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hRe-Q7-Fxe">
@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bl8-Az-QX2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bl8-Az-QX2">
                                 <rect key="frame" x="16" y="94" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6qC-s0-rE2"/>
@@ -56,15 +56,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMd-SI-Rhb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMd-SI-Rhb">
                                 <rect key="frame" x="16" y="159" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8kf-71-ds6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDx-KR-tEC">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDx-KR-tEC">
                                 <rect key="frame" x="16" y="242" width="160" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -78,7 +78,7 @@
                                     <action selector="tapLoginButton:" destination="KSz-nC-Xsf" eventType="touchUpInside" id="lfV-UJ-tTT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uw-6m-rHq">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uw-6m-rHq">
                                 <rect key="frame" x="199" y="242" width="160" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aD5-tq-3hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.5" y="423.5"/>
+            <point key="canvasLocation" x="1892.5" y="439.5"/>
         </scene>
         <!--Question1 View Controller-->
         <scene sceneID="3iM-GI-aXg">
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25x-7z-C7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891.5" y="-404.5"/>
+            <point key="canvasLocation" x="1892.5" y="-350.5"/>
         </scene>
         <!--Question2 View Controller-->
         <scene sceneID="4l1-jo-Lmg">
@@ -283,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXC-Z5-eUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2343.5" y="-404.5"/>
+            <point key="canvasLocation" x="2358.5" y="-350.5"/>
         </scene>
         <!--Question3 View Controller-->
         <scene sceneID="Pt5-Fa-d2t">
@@ -631,7 +631,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htU-XQ-XcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.5" y="-404.5"/>
+            <point key="canvasLocation" x="797.5" y="-350.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="clt-5d-xW0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7zh-dY-vTw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j8U-mw-VfB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KSz-nC-Xsf" kind="relationship" relationship="rootViewController" id="7FM-oP-i1F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gl-6o-EFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.5" y="439.5"/>
         </scene>
     </scenes>
 </document>

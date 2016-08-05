@@ -99,8 +99,8 @@
 		0D35E8F71D51CAF70029ED56 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0DC8DE5B1D5474AA005C6E7E /* LoginViewController.swift */,
 				0DB6BACB1D52F4B800A608B5 /* MainViewController.swift */,
+				0DC8DE5B1D5474AA005C6E7E /* LoginViewController.swift */,
 				0D35E91D1D51E46E0029ED56 /* Question1ViewController.swift */,
 				0D35E91F1D51E4C40029ED56 /* Question2ViewController.swift */,
 				0D35E9211D51E4D50029ED56 /* Question3ViewController.swift */,
