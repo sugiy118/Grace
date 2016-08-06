@@ -14,6 +14,7 @@ class ResultManager: NSObject {
     
     func fetchResults(callback: () -> Void) {
         let query = NCMBQuery(className: "Result")
+        query.whereKey("userName", equalTo: NCMBUser.currentUser().userName)
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
                 self.results = []
@@ -23,6 +24,7 @@ class ResultManager: NSObject {
                     let quiznumber = object.objectForKey("quizNumber") as! Int
                     let result = Result(score: score, name: name, quiznumber: quiznumber)
                     self.results.append(result)
+                    print(self.results[0].name)
                     callback()
                 }
             }

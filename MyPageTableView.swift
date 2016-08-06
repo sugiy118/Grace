@@ -45,7 +45,7 @@ class MyPageTableView: UITableView,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-            return 60
+            return 63
     }
 
     /*

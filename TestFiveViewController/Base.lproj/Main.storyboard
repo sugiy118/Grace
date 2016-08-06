@@ -977,8 +977,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGU-UZ-S00">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foc-ae-21f">
-                                        <rect key="frame" x="170" y="89" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foc-ae-21f">
+                                        <rect key="frame" x="91" y="80" width="200" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="5F9-Nc-7gc"/>
+                                            <constraint firstAttribute="width" constant="200" id="k71-P7-SFO"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -987,6 +991,8 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="9xI-q1-lFD"/>
+                                    <constraint firstItem="foc-ae-21f" firstAttribute="top" secondItem="XGU-UZ-S00" secondAttribute="top" constant="80" id="Z2P-HO-fGZ"/>
+                                    <constraint firstItem="foc-ae-21f" firstAttribute="centerX" secondItem="XGU-UZ-S00" secondAttribute="centerX" id="pUF-7W-dzc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -999,6 +1005,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="hhV-hh-E2U"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="foc-ae-21f" id="8GF-Hr-1s6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XC-KM-ojm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
