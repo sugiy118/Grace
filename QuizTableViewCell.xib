@@ -8,46 +8,125 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="QuizTableViewCell" customModule="GraceViewController" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="318" height="58"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="QuizTableViewCell" customModule="GraceViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="318" height="57"/>
+                <rect key="frame" x="0.0" y="0.0" width="317" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8R-Ne-lJN" userLabel="Title Label">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q(  )" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8R-Ne-lJN" userLabel="Title Label">
+                        <rect key="frame" x="50" y="0.0" width="267" height="39"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="JJF-8S-bxB"/>
+                            <constraint firstAttribute="height" constant="39" id="fEU-7b-2x5"/>
+                            <constraint firstAttribute="height" constant="39" id="knV-qW-1gJ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="knV-qW-1gJ"/>
+                            </mask>
+                        </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-gZ-a4V" userLabel="Quiz Number Label">
-                        <rect key="frame" x="0.0" y="21" width="318" height="40"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-aN-Zjt" userLabel="Place Label">
+                        <rect key="frame" x="50" y="63" width="240" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="2e1-57-yIs"/>
+                            <constraint firstAttribute="width" constant="150" id="ByL-AG-G6m"/>
+                            <constraint firstAttribute="height" constant="21" id="KQb-Ff-HW7"/>
+                            <constraint firstAttribute="width" constant="240" id="MSf-6L-rns"/>
+                            <constraint firstAttribute="height" constant="20" id="em5-R9-YrD"/>
+                            <constraint firstAttribute="height" constant="18" id="hR5-D8-vdt"/>
+                            <constraint firstAttribute="width" constant="120" id="pJz-Kb-Fkg"/>
+                            <constraint firstAttribute="width" constant="120" id="xrs-ka-Hxd"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ByL-AG-G6m"/>
+                                <exclude reference="KQb-Ff-HW7"/>
+                                <exclude reference="em5-R9-YrD"/>
+                                <exclude reference="pJz-Kb-Fkg"/>
+                                <exclude reference="xrs-ka-Hxd"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-nK-xIe" userLabel="Schedule Label">
+                        <rect key="frame" x="50" y="42" width="267" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="91Z-I2-PVe"/>
+                            <constraint firstAttribute="height" constant="18" id="DTB-NL-eXd"/>
+                            <constraint firstAttribute="width" constant="200" id="IC0-Pr-oz1"/>
+                            <constraint firstAttribute="width" constant="270" id="L6o-lE-cBP"/>
+                            <constraint firstAttribute="width" constant="240" id="XzY-JF-DMh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="91Z-I2-PVe"/>
+                                <exclude reference="IC0-Pr-oz1"/>
+                                <exclude reference="L6o-lE-cBP"/>
+                                <exclude reference="XzY-JF-DMh"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-Id-9oQ" userLabel="Quiz NumberLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="42" height="86"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39" id="fGf-ei-VZm"/>
+                            <constraint firstAttribute="width" constant="42" id="vrp-Wk-etc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fGf-ei-VZm"/>
+                            </mask>
+                        </variation>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="5Te-Ic-YqO"/>
-                    <constraint firstItem="9ju-gZ-a4V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="93p-d6-cW5"/>
-                    <constraint firstItem="9ju-gZ-a4V" firstAttribute="top" secondItem="q8R-Ne-lJN" secondAttribute="bottom" constant="1" id="RG6-7E-8LU"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="q8R-Ne-lJN" secondAttribute="trailing" constant="-8" id="VI7-uh-OhQ"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="9ju-gZ-a4V" secondAttribute="trailing" constant="-8" id="VMX-7u-HF7"/>
-                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Xmr-pC-Cr2"/>
+                    <constraint firstItem="WcQ-nK-xIe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="42" id="05m-SD-ZhP"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-8" id="I1t-TJ-JsY"/>
+                    <constraint firstItem="WcQ-nK-xIe" firstAttribute="top" secondItem="q8R-Ne-lJN" secondAttribute="bottom" constant="3" id="M75-in-SXk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="q8R-Ne-lJN" secondAttribute="trailing" constant="-8" id="MEg-RS-cKo"/>
+                    <constraint firstItem="Vqf-Id-9oQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="N5I-vE-XWf"/>
+                    <constraint firstItem="EkB-aN-Zjt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="42" id="NIY-zv-A3b"/>
+                    <constraint firstItem="Vqf-Id-9oQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Yar-Zt-Ovx"/>
+                    <constraint firstItem="WcQ-nK-xIe" firstAttribute="top" secondItem="EkB-aN-Zjt" secondAttribute="bottom" constant="4" id="ZFJ-Df-aQi"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="leading" secondItem="Vqf-Id-9oQ" secondAttribute="trailing" constant="8" id="aTW-S4-0gZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vqf-Id-9oQ" secondAttribute="bottom" constant="-10" id="awK-Wz-bFP"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="leading" secondItem="Vqf-Id-9oQ" secondAttribute="trailing" constant="8" id="fFA-2l-zuj"/>
+                    <constraint firstItem="EkB-aN-Zjt" firstAttribute="top" secondItem="WcQ-nK-xIe" secondAttribute="bottom" constant="3" id="hi3-Bu-gn5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WcQ-nK-xIe" secondAttribute="trailing" constant="-8" id="li3-3D-QYx"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="o7F-1p-dun"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="leading" secondItem="Vqf-Id-9oQ" secondAttribute="trailing" id="vhJ-TX-PkY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vqf-Id-9oQ" secondAttribute="bottom" constant="-8" id="wpn-U1-xCA"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="awK-Wz-bFP"/>
+                        <exclude reference="I1t-TJ-JsY"/>
+                        <exclude reference="fFA-2l-zuj"/>
+                        <exclude reference="vhJ-TX-PkY"/>
+                        <exclude reference="ZFJ-Df-aQi"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="quizNumber" destination="q8R-Ne-lJN" id="X0X-Nc-8WO"/>
-                <outlet property="quizTitle" destination="9ju-gZ-a4V" id="XmN-1G-S9i"/>
+                <outlet property="quizNumber" destination="Vqf-Id-9oQ" id="A8w-LN-Ufh"/>
+                <outlet property="quizPlace" destination="EkB-aN-Zjt" id="Zgw-8T-98W"/>
+                <outlet property="quizSchedule" destination="WcQ-nK-xIe" id="7Yj-WX-OfG"/>
+                <outlet property="quizTitle" destination="q8R-Ne-lJN" id="14i-74-Ukn"/>
             </connections>
-            <point key="canvasLocation" x="287" y="325"/>
+            <point key="canvasLocation" x="286.5" y="338.5"/>
         </tableViewCell>
     </objects>
 </document>

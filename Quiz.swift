@@ -12,5 +12,7 @@ class Quiz: NSObject {
     
     var title: String = ""
     var quiznumber: Int = 0
+    var schedule: String = ""
+    var place: String = ""
 
 }

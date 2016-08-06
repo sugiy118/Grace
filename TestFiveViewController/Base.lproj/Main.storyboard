@@ -24,7 +24,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="開催中!!" id="BfZ-ry-SeX"/>
+                    <navigationItem key="navigationItem" title="美術展クイズ" id="BfZ-ry-SeX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="locationScrollView" destination="n9M-h3-MU8" id="nWQ-F9-DrG"/>

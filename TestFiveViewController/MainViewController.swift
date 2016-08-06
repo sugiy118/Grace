@@ -17,7 +17,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
 
     let tokyo = "TOKYO"
     let tokyoImageName = "tokyo_top_image.png"
-    let blue = UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
+    let blue = UIColor(red: 0.0 / 255, green: 0.0 / 255, blue: 160.0 / 255, alpha: 0.5)
     let green = UIColor(red: 105.0 / 255, green: 207.0 / 255, blue: 153.0 / 255, alpha: 1.0)
     let red = UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
 

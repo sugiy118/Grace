@@ -11,6 +11,8 @@ import UIKit
 class QuizTableViewCell: UITableViewCell {
     @IBOutlet weak var quizNumber: UILabel!
     @IBOutlet weak var quizTitle: UILabel!
+    @IBOutlet weak var quizSchedule: UILabel!
+    @IBOutlet weak var quizPlace: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

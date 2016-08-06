@@ -63,7 +63,9 @@ class MainTableView: UITableView,UITableViewDelegate, UITableViewDataSource {
             print("\(quiz.quiznumber)あああああ")
             print("\(quiz.title)いいいいい")
             cell.quizNumber.text = "Q.\(quiz.quiznumber)"
-            cell.quizTitle.text = quiz.title
+            cell.quizTitle.text = "『\(quiz.title)』"
+            cell.quizPlace.text = "\(quiz.place)"
+            cell.quizSchedule.text = "\(quiz.schedule)"
             
             return cell
         }

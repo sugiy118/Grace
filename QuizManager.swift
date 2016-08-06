@@ -22,10 +22,14 @@ class QuizManager: NSObject {
                 for object in objects {
                     let title = object.objectForKey("title") as! String
                     let quizNumber = object.objectForKey("quizNumber") as! Int
+                    let schedule = object.objectForKey("schedule") as! String
+                    let place = object.objectForKey("place") as! String
+
                     let quiz = Quiz()
                     quiz.quiznumber = quizNumber
                     quiz.title = title
-                    
+                    quiz.schedule = schedule
+                    quiz.place = place
                     self.quizzes.append(quiz)
                     callback()
                 }
