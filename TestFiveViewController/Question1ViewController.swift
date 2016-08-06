@@ -209,6 +209,7 @@ class Question1ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let question2ViewController = segue.destinationViewController as! Question2ViewController
         question2ViewController.x = self.x
+        question2ViewController.quiz = self.quiz
     }
     
     override func didReceiveMemoryWarning() {

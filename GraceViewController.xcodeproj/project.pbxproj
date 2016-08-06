@@ -22,6 +22,9 @@
 		0D35E9241D51E4E40029ED56 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35E9231D51E4E40029ED56 /* Question4ViewController.swift */; };
 		0D35E9261D51E4F20029ED56 /* Question5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35E9251D51E4F20029ED56 /* Question5ViewController.swift */; };
 		0D35E9291D51EC1A0029ED56 /* AnswerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35E9281D51EC1A0029ED56 /* AnswerManager.swift */; };
+		0D4D883A1D55E496007E09BE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D88391D55E496007E09BE /* Result.swift */; };
+		0D4D883C1D55EAB9007E09BE /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D883B1D55EAB9007E09BE /* MyPageViewController.swift */; };
+		0D4D883E1D55EAF1007E09BE /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D883D1D55EAF1007E09BE /* ResultManager.swift */; };
 		0DB6BACA1D52F18E00A608B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6BAC91D52F18E00A608B5 /* ResultViewController.swift */; };
 		0DB6BACC1D52F4B800A608B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6BACB1D52F4B800A608B5 /* MainViewController.swift */; };
 		0DB6BAD91D52FA0100A608B5 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6BAD81D52FA0100A608B5 /* QuizManager.swift */; };
@@ -53,6 +56,9 @@
 		0D35E9251D51E4F20029ED56 /* Question5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
 		0D35E9281D51EC1A0029ED56 /* AnswerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerManager.swift; sourceTree = "<group>"; };
 		0D35E92A1D51F2F70029ED56 /* TestFiveViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestFiveViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D4D88391D55E496007E09BE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0D4D883B1D55EAB9007E09BE /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		0D4D883D1D55EAF1007E09BE /* ResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultManager.swift; sourceTree = "<group>"; };
 		0DB6BAC91D52F18E00A608B5 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0DB6BACB1D52F4B800A608B5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0DB6BAD81D52FA0100A608B5 /* QuizManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				0D35E9231D51E4E40029ED56 /* Question4ViewController.swift */,
 				0D35E9251D51E4F20029ED56 /* Question5ViewController.swift */,
 				0DB6BAC91D52F18E00A608B5 /* ResultViewController.swift */,
+				0D4D883B1D55EAB9007E09BE /* MyPageViewController.swift */,
 				0D35E8F81D51CAF70029ED56 /* AppDelegate.swift */,
 				0D35E8FC1D51CAF70029ED56 /* Main.storyboard */,
 				0D35E8FF1D51CAF70029ED56 /* Assets.xcassets */,
@@ -128,6 +135,8 @@
 				0D35E9171D51E2D60029ED56 /* Quiz.swift */,
 				0DB6BAD81D52FA0100A608B5 /* QuizManager.swift */,
 				0DC8DE5D1D547558005C6E7E /* User.swift */,
+				0D4D88391D55E496007E09BE /* Result.swift */,
+				0D4D883D1D55EAF1007E09BE /* ResultManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -221,8 +230,10 @@
 				0DB6BACA1D52F18E00A608B5 /* ResultViewController.swift in Sources */,
 				0DB6BACC1D52F4B800A608B5 /* MainViewController.swift in Sources */,
 				0D35E91A1D51E2E80029ED56 /* Question.swift in Sources */,
+				0D4D883E1D55EAF1007E09BE /* ResultManager.swift in Sources */,
 				0D35E9291D51EC1A0029ED56 /* AnswerManager.swift in Sources */,
 				0D35E9201D51E4C40029ED56 /* Question2ViewController.swift in Sources */,
+				0D4D883A1D55E496007E09BE /* Result.swift in Sources */,
 				0DB6BAE41D52FD3400A608B5 /* QuizTableViewCell.swift in Sources */,
 				0D35E9151D51E2BA0029ED56 /* Answer.swift in Sources */,
 				0D35E91E1D51E46E0029ED56 /* Question1ViewController.swift in Sources */,
@@ -232,6 +243,7 @@
 				0DB6BAD91D52FA0100A608B5 /* QuizManager.swift in Sources */,
 				0D35E9221D51E4D50029ED56 /* Question3ViewController.swift in Sources */,
 				0DB6BADD1D52FCE900A608B5 /* MainTableView.swift in Sources */,
+				0D4D883C1D55EAB9007E09BE /* MyPageViewController.swift in Sources */,
 				0D35E9241D51E4E40029ED56 /* Question4ViewController.swift in Sources */,
 				0DB6BAE01D52FD0D00A608B5 /* AreaTableViewCell.swift in Sources */,
 				0D35E9261D51E4F20029ED56 /* Question5ViewController.swift in Sources */,

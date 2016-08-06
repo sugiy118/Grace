@@ -22,6 +22,7 @@ class Question5ViewController: UIViewController {
     var x: Int = 0
     var a = 0
     var b = 1
+    var quiz: Quiz!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -193,6 +194,7 @@ class Question5ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let resultViewController = segue.destinationViewController as! ResultViewController
         resultViewController.x = self.x
+        resultViewController.quiz = self.quiz
     }
 
     override func didReceiveMemoryWarning() {

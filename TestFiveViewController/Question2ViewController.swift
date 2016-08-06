@@ -22,6 +22,8 @@ class Question2ViewController: UIViewController {
     var a = 0
     var b = 1
 
+    var quiz: Quiz!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("2問目開始時点での得点は\(x)")
@@ -190,6 +192,7 @@ class Question2ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let question3ViewController = segue.destinationViewController as! Question3ViewController
         question3ViewController.x = self.x
+        question3ViewController.quiz = self.quiz
     }
     
     override func didReceiveMemoryWarning() {

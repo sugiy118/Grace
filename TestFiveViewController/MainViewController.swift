@@ -76,15 +76,9 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     
     func didSelectTableViewCell(quiz: Quiz) {
         self.currentSelectedQuiz = quiz
-        print("=======")
-        print(quiz)
-        print(quiz.title)
-        print(quiz.quiznumber)
-        print("=======")
         self.performSegueWithIdentifier("ShowToQuestion1ViewController", sender: nil)
         print("\(currentSelectedQuiz?.quiznumber)ええええ")
     }
-
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if NCMBUser.currentUser() != nil {
@@ -93,7 +87,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
         print("\(self.currentSelectedQuiz)おおおおお")
         }
     }
-
 
     /*
     // MARK: - Navigation
