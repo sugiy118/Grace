@@ -62,7 +62,7 @@ class MainTableView: UITableView,UITableViewDelegate, UITableViewDataSource {
             let quiz = self.quizManager.quizzes[indexPath.row]
             print("\(quiz.quiznumber)あああああ")
             print("\(quiz.title)いいいいい")
-            cell.quizNumber.text = "クイズNo.\(quiz.quiznumber)"
+            cell.quizNumber.text = "Q.\(quiz.quiznumber)"
             cell.quizTitle.text = quiz.title
             
             return cell
