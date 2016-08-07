@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yC5-eJ-mIE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ODX-jb-6Il">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" customModule="GraceViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="MainViewController" id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" customModule="GraceViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,11 +30,12 @@
                         <outlet property="locationScrollView" destination="n9M-h3-MU8" id="nWQ-F9-DrG"/>
                         <segue destination="7zh-dY-vTw" kind="presentation" identifier="modalLoginViewController" id="MRe-i1-p2G"/>
                         <segue destination="Cls-hs-Fcp" kind="show" identifier="ShowToQuestion1ViewController" id="V3H-yI-wLF"/>
+                        <segue destination="dl2-Ry-HS3" kind="presentation" identifier="myPageSegue" id="Ahk-Th-3so"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160.5" y="-350.5"/>
+            <point key="canvasLocation" x="2148.5" y="-350.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hRe-Q7-Fxe">
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aD5-tq-3hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098.5" y="-350.5"/>
+            <point key="canvasLocation" x="3170.5" y="748.5"/>
         </scene>
         <!--Question1 View Controller-->
         <scene sceneID="3iM-GI-aXg">
@@ -262,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25x-7z-C7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658.5" y="-1146.5"/>
+            <point key="canvasLocation" x="2658.5" y="-1036.5"/>
         </scene>
         <!--Question2 View Controller-->
         <scene sceneID="4l1-jo-Lmg">
@@ -399,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXC-Z5-eUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098.5" y="-1146.5"/>
+            <point key="canvasLocation" x="3102.5" y="-1036.5"/>
         </scene>
         <!--Question3 View Controller-->
         <scene sceneID="Pt5-Fa-d2t">
@@ -532,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAn-Rt-khf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3550.5" y="-1146.5"/>
+            <point key="canvasLocation" x="3560.5" y="-1036.5"/>
         </scene>
         <!--Question4 View Controller-->
         <scene sceneID="2bg-Su-2d8">
@@ -665,7 +666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYY-hK-QT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3993.5" y="-1152.5"/>
+            <point key="canvasLocation" x="4051.5" y="-1036.5"/>
         </scene>
         <!--Question5 View Controller-->
         <scene sceneID="iz4-gf-dXv">
@@ -800,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdP-jw-3ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4451.5" y="-1152.5"/>
+            <point key="canvasLocation" x="4551.5" y="-1036.5"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="0fn-IU-fIn">
@@ -816,7 +817,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-BY-e71">
                                 <rect key="frame" x="-4" y="64" width="383" height="200"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="qhi-Xw-hrv"/>
                                 </constraints>
@@ -831,16 +832,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZG-ch-GUV">
-                                <rect key="frame" x="147" y="403" width="80" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="4Mn-dn-ejZ"/>
-                                    <constraint firstAttribute="width" constant="80" id="5HS-fL-JoO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="でした！" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNS-Sz-taR">
@@ -881,12 +872,22 @@
                                 <rect key="frame" x="26" y="504" width="323" height="28"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="結果をマイページに記録する">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="recordMyPageBtn:" destination="lLC-03-gn2" eventType="touchUpInside" id="dwf-bD-Fv0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZG-ch-GUV">
+                                <rect key="frame" x="147" y="403" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4Mn-dn-ejZ"/>
+                                    <constraint firstAttribute="width" constant="80" id="5HS-fL-JoO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -921,7 +922,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZJ-FV-drl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.5" y="-1152.5"/>
+            <point key="canvasLocation" x="1668.5" y="-1216.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kM5-vf-erd">
@@ -960,12 +961,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gl-6o-EFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658.5" y="-350.5"/>
+            <point key="canvasLocation" x="2632.5" y="748.5"/>
         </scene>
         <!--My Page View Controller-->
         <scene sceneID="awv-nV-GV4">
             <objects>
-                <viewController id="yC5-eJ-mIE" userLabel="My Page View Controller" customClass="MyPageViewController" customModule="GraceViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" title="MyPageViewController" id="yC5-eJ-mIE" userLabel="My Page View Controller" customClass="MyPageViewController" customModule="GraceViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wlb-3Y-MIQ"/>
                         <viewControllerLayoutGuide type="bottom" id="MTs-Ot-dMA"/>
@@ -975,7 +976,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGU-UZ-S00">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="200"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foc-ae-21f">
                                         <rect key="frame" x="91" y="80" width="200" height="42"/>
@@ -999,11 +1000,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XGU-UZ-S00" secondAttribute="trailing" constant="-20" id="5M1-Fq-OEy"/>
+                            <constraint firstItem="XGU-UZ-S00" firstAttribute="top" secondItem="TVc-1o-xSh" secondAttribute="topMargin" constant="64" id="Gdo-WI-JmB"/>
+                            <constraint firstItem="XGU-UZ-S00" firstAttribute="top" secondItem="TVc-1o-xSh" secondAttribute="topMargin" constant="44" id="dL1-Iv-DIL"/>
                             <constraint firstItem="XGU-UZ-S00" firstAttribute="top" secondItem="TVc-1o-xSh" secondAttribute="topMargin" id="fUn-NJ-6AU"/>
                             <constraint firstItem="XGU-UZ-S00" firstAttribute="leading" secondItem="TVc-1o-xSh" secondAttribute="leadingMargin" constant="-20" id="mbO-2R-Xfy"/>
+                            <constraint firstItem="XGU-UZ-S00" firstAttribute="top" secondItem="Wlb-3Y-MIQ" secondAttribute="bottom" id="raJ-Q8-8aJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gdo-WI-JmB"/>
+                                <exclude reference="dL1-Iv-DIL"/>
+                                <exclude reference="fUn-NJ-6AU"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="hhV-hh-E2U"/>
+                    <navigationItem key="navigationItem" title="MyPage" id="Z1q-Di-Ice"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="userNameLabel" destination="foc-ae-21f" id="8GF-Hr-1s6"/>
@@ -1011,7 +1022,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XC-KM-ojm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.5" y="437.5"/>
+            <point key="canvasLocation" x="3361.5" y="-191.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jSR-fL-m7f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dl2-Ry-HS3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rW7-Ig-JMh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yC5-eJ-mIE" kind="relationship" relationship="rootViewController" id="D2s-q7-lcE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYQ-Gp-FkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774.5" y="-191.5"/>
         </scene>
     </scenes>
 </document>

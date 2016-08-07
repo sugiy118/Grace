@@ -20,6 +20,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     let blue = UIColor(red: 0.0 / 255, green: 0.0 / 255, blue: 160.0 / 255, alpha: 0.5)
     let green = UIColor(red: 105.0 / 255, green: 207.0 / 255, blue: 153.0 / 255, alpha: 1.0)
     let red = UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
+    
+    var mypageButton = UIBarButtonItem()
 
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     
     override func viewWillAppear(animated: Bool) {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(MainViewController.logout))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "MyPage", style: .Plain, target: self, action: #selector(MainViewController.toMyPage))
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -74,6 +77,10 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
         performSegueWithIdentifier("modalLoginViewController", sender: self)
     }
     
+    func toMyPage(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("myPageSegue", sender: self)
+    }
+    
     func didSelectTableViewCell(quiz: Quiz) {
         self.currentSelectedQuiz = quiz
         self.performSegueWithIdentifier("ShowToQuestion1ViewController", sender: nil)
@@ -82,21 +89,22 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if NCMBUser.currentUser() != nil {
-        let question1ViewController = segue.destinationViewController as! Question1ViewController
-        question1ViewController.quiz = self.currentSelectedQuiz
-        print("\(self.currentSelectedQuiz)おおおおお")
+            if segue.identifier == "ShowToQuestion1ViewController" {
+//                let nav = segue.destinationViewController as! MyPageViewController
+                let question1ViewController = segue.destinationViewController as! Question1ViewController
+                question1ViewController.quiz = self.currentSelectedQuiz
+                print("\(self.currentSelectedQuiz)おおおおお")
+            }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backFromSecondView(segue:UIStoryboardSegue){
+        NSLog("MainViewController#backFromSecondView")
     }
-    */
+    
+
+
+
 }
 
 

@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q(  )" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8R-Ne-lJN" userLabel="Title Label">
-                        <rect key="frame" x="50" y="0.0" width="267" height="39"/>
+                        <rect key="frame" x="50" y="2" width="267" height="39"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="39" id="fEU-7b-2x5"/>
                             <constraint firstAttribute="height" constant="39" id="knV-qW-1gJ"/>
@@ -31,7 +31,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-aN-Zjt" userLabel="Place Label">
-                        <rect key="frame" x="50" y="63" width="240" height="18"/>
+                        <rect key="frame" x="50" y="65" width="240" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="ByL-AG-G6m"/>
                             <constraint firstAttribute="height" constant="21" id="KQb-Ff-HW7"/>
@@ -54,7 +54,7 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-nK-xIe" userLabel="Schedule Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-nK-xIe" userLabel="Schedule Label">
                         <rect key="frame" x="50" y="42" width="267" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="91Z-I2-PVe"/>
@@ -94,11 +94,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="WcQ-nK-xIe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="42" id="05m-SD-ZhP"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-10" id="75j-5A-abY"/>
                     <constraint firstItem="q8R-Ne-lJN" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-8" id="I1t-TJ-JsY"/>
                     <constraint firstItem="WcQ-nK-xIe" firstAttribute="top" secondItem="q8R-Ne-lJN" secondAttribute="bottom" constant="3" id="M75-in-SXk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="q8R-Ne-lJN" secondAttribute="trailing" constant="-8" id="MEg-RS-cKo"/>
                     <constraint firstItem="Vqf-Id-9oQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="N5I-vE-XWf"/>
                     <constraint firstItem="EkB-aN-Zjt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="42" id="NIY-zv-A3b"/>
+                    <constraint firstItem="q8R-Ne-lJN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="WGS-ye-UFJ"/>
                     <constraint firstItem="Vqf-Id-9oQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Yar-Zt-Ovx"/>
                     <constraint firstItem="WcQ-nK-xIe" firstAttribute="top" secondItem="EkB-aN-Zjt" secondAttribute="bottom" constant="4" id="ZFJ-Df-aQi"/>
                     <constraint firstItem="q8R-Ne-lJN" firstAttribute="leading" secondItem="Vqf-Id-9oQ" secondAttribute="trailing" constant="8" id="aTW-S4-0gZ"/>
@@ -113,8 +115,10 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="awK-Wz-bFP"/>
+                        <exclude reference="75j-5A-abY"/>
                         <exclude reference="I1t-TJ-JsY"/>
                         <exclude reference="fFA-2l-zuj"/>
+                        <exclude reference="o7F-1p-dun"/>
                         <exclude reference="vhJ-TX-PkY"/>
                         <exclude reference="ZFJ-Df-aQi"/>
                     </mask>

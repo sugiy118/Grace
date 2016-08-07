@@ -32,6 +32,10 @@ class ResultViewController: UIViewController {
     @IBAction func gotoTopBtn(sender: UIButton) {
          self.performSegueWithIdentifier("gotoTopSegue", sender: nil)
     }
+    
+    func toMyPage(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("myPageSegue", sender: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

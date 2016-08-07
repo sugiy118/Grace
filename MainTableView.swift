@@ -76,7 +76,7 @@ class MainTableView: UITableView,UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             return 200
         } else {
-            return 85
+            return 87
         }
     }
     
