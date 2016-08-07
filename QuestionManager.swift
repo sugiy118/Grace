@@ -25,6 +25,7 @@ class QuestionManager: NSObject {
                 for object in objects {
                     let sentence = object.objectForKey("sentence") as! String
                     let question = Question()
+                    self.questions = []
                     question.sentence = sentence
                     self.questions.append(question)
                 }

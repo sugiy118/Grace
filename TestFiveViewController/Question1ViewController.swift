@@ -29,15 +29,17 @@ class Question1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("1問目開始時点での得点は\(x)")
+
         print("=======")
         print(quiz)
-        print(quiz.title)
-        print(quiz.quiznumber)
+        print("クイズタイトルは\(quiz.title)")
+        print("クイズ番号は\(quiz.quiznumber)")
+        print("1問目開始時点での得点は\(x)")
         print("=======")
 
         questionManager.fetchQuestion1(quiz.quiznumber) { 
             self.question1Label.text = self.questionManager.questions[0].sentence
+            print("クイズ番号は\(self.quiz.quiznumber)")
         }
 
         answerManager.fetchAnswer1(quiz.quiznumber) { 
@@ -46,7 +48,7 @@ class Question1ViewController: UIViewController {
             self.answer3.setTitle(self.answerManager.answers[0].answer3, forState: UIControlState.Normal)
             self.answer4.setTitle(self.answerManager.answers[0].answer4, forState: UIControlState.Normal)
             self.a = self.answerManager.answers[0].rightAnswer
-            print(self.a)
+            print("1問目の正解値は\(self.a)")
         }
         
 //        answerManager.fetchAnswer1 {

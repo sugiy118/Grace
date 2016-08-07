@@ -32,6 +32,7 @@ class AnswerManager: NSObject {
                     let x = object.objectForKey("rightAnswer") as! Int
                     print(x)
                     let answer = Answer()
+                    self.answers = []
                     answer.answer1 = answer1
                     answer.answer2 = answer2
                     answer.answer3 = answer3

@@ -99,6 +99,7 @@
 				0D35E9101D51E0180029ED56 /* NCMB.framework */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 5;
 		};
 		0D35E8F61D51CAF70029ED56 /* Products */ = {
 			isa = PBXGroup;
@@ -388,14 +389,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yu Sugiyama (5C29G4K446)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NCMB",
 				);
 				INFOPLIST_FILE = TestFiveViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sugiy118.GraceViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sugiy118.grace;
 				PRODUCT_NAME = GraceViewController;
+				PROVISIONING_PROFILE = "33020e1f-b28c-4671-9b23-868c77a803f4";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFiveViewController/TestFiveViewController-Bridging-Header.h";
 			};
 			name = Debug;
@@ -404,14 +407,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Sugiyama (8T28ALZTKZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NCMB",
 				);
 				INFOPLIST_FILE = TestFiveViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sugiy118.GraceViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sugiy118.grace;
 				PRODUCT_NAME = GraceViewController;
+				PROVISIONING_PROFILE = "33020e1f-b28c-4671-9b23-868c77a803f4";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFiveViewController/TestFiveViewController-Bridging-Header.h";
 			};
 			name = Release;

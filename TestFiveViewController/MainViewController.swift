@@ -26,7 +26,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let hoge = setMainTableView(0, y: 0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
 
         self.locationScrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     }
     
     func setMainTableView(x: CGFloat,y: CGFloat, locationName: String, locationImageName: String, color: UIColor) -> UITableView{
-        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        let frame = CGRectMake(x, y, self.view.frame.width, locationScrollView.frame.height)
 
 //        let frame = CGRectMake(0, 0, self.view.frame.width, locationScrollView.frame.height)
 //        let frame = CGRectMake(x, 0, self.view.frame.width, locationScrollView.frame.height)
@@ -90,7 +90,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if NCMBUser.currentUser() != nil {
             if segue.identifier == "ShowToQuestion1ViewController" {
-//                let nav = segue.destinationViewController as! MyPageViewController
                 let question1ViewController = segue.destinationViewController as! Question1ViewController
                 question1ViewController.quiz = self.currentSelectedQuiz
                 print("\(self.currentSelectedQuiz)おおおおお")
