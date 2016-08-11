@@ -21,36 +21,10 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
-    @IBAction func recordMyPageBtn(sender: UIButton) {
-        print("\(NCMBUser.currentUser().userName)")
-        print("\(self.quiz)飛ばす先2つ目")
-        let result = Result(score: self.x, name: NCMBUser.currentUser().userName, quiznumber: quiz.quiznumber)
-        result.save()
-    }
-    
-    @IBAction func gotoTopBtn(sender: UIButton) {
-         self.performSegueWithIdentifier("gotoTopSegue", sender: nil)
-    }
-    
-    func toMyPage(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("myPageSegue", sender: nil)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

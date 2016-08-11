@@ -21,7 +21,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     let green = UIColor(red: 105.0 / 255, green: 207.0 / 255, blue: 153.0 / 255, alpha: 1.0)
     let red = UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
     
-    var mypageButton = UIBarButtonItem()
+
 
     
     override func viewDidLoad() {
@@ -40,15 +40,12 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     }
     
     override func viewWillAppear(animated: Bool) {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(MainViewController.logout))
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "MyPage", style: .Plain, target: self, action: #selector(MainViewController.toMyPage))
+        super.viewDidAppear(animated)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if NCMBUser.currentUser() == nil {
-            performSegueWithIdentifier("modalLoginViewController", sender: self)
-        }
+
     }
     
     func setMainTableView(x: CGFloat,y: CGFloat, locationName: String, locationImageName: String, color: UIColor) -> UITableView{
@@ -72,15 +69,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    func logout() {
-        NCMBUser.logOut()
-        performSegueWithIdentifier("modalLoginViewController", sender: self)
-    }
-    
-    func toMyPage(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("myPageSegue", sender: self)
-    }
-    
     func didSelectTableViewCell(quiz: Quiz) {
         self.currentSelectedQuiz = quiz
         self.performSegueWithIdentifier("ShowToQuestion1ViewController", sender: nil)
@@ -88,19 +76,18 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if NCMBUser.currentUser() != nil {
+//        if NCMBUser.currentUser() != nil {
             if segue.identifier == "ShowToQuestion1ViewController" {
                 let question1ViewController = segue.destinationViewController as! Question1ViewController
                 question1ViewController.quiz = self.currentSelectedQuiz
                 print("\(self.currentSelectedQuiz)おおおおお")
             }
-        }
+//        }
     }
     
-    @IBAction func backFromSecondView(segue:UIStoryboardSegue){
-        NSLog("MainViewController#backFromSecondView")
-    }
-    
+//    @IBAction func backFromSecondView(segue:UIStoryboardSegue){
+//        NSLog("MainViewController#backFromSecondView")
+//    }
 
 
 
