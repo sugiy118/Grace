@@ -29,6 +29,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, MainTableViewD
 
         let hoge = setMainTableView(0, y: 0, locationName: self.tokyo, locationImageName: self.tokyoImageName, color: self.blue)
 
+        print(self.view.frame.width)
         self.locationScrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
 //        self.locationScrollView.contentSize = CGSizeMake(self.view.frame.width, self.locationScrollView.frame.height)
         self.locationScrollView.pagingEnabled = true
